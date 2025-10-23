@@ -3,6 +3,11 @@ import cors from "cors";
 import dotenv from "dotenv";
 import db from "./config/db.js";
 
+import patientRoutes from "./routes/patientRoutes.js";
+
+// Middleware
+app.use("/api/patients", patientRoutes);
+
 dotenv.config();
 const app = express();
 
