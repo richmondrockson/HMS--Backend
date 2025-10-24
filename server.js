@@ -4,9 +4,13 @@ import dotenv from "dotenv";
 import db from "./config/db.js";
 
 import patientRoutes from "./routes/patientRoutes.js";
+import providerRoutes from "./routes/providerRoutes.js";
+import admissionRoutes from "./routes/admissionRoutes.js";
 
 // Middleware
 app.use("/api/patients", patientRoutes);
+app.use("/api/providers", providerRoutes);
+app.use("/api/admissions", admissionRoutes);
 
 dotenv.config();
 const app = express();
